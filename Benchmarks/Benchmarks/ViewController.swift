@@ -41,6 +41,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(annotation)
         annotation1.coordinate = CLLocationCoordinate2D(latitude: 51.697451, longitude: -2.218123)
         mapView.addAnnotation(annotation1)
+        
+        centerMapOnLocation(location: locationManager.location!)
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,10 +62,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
         
-//        self.mapView.setRegion(region, animated: true)
-        
-        let initialLocation = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
-        centerMapOnLocation(location: initialLocation)
+        self.mapView.showsCompass = true
+        self.mapView.showsUserLocation = true
+        self.mapView.showsBuildings = true
     }
 }
 
