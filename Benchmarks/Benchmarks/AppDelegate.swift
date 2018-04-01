@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func preloadData() {
         // Load the data file. For any reasons it can't be loaded, we just return
-        guard let contentsOfURL = Bundle.main.url(forResource: "CompleteBenchMarkArchive-NoFBMs",withExtension: "csv") else {
+        guard let contentsOfURL = Bundle.main.url(forResource: "Benchmarks",withExtension: "csv") else {
             return
         }
         // Remove all the menu items before preloading
