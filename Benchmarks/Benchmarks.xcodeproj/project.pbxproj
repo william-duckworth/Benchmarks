@@ -15,6 +15,7 @@
 		3DDA8DA9207156D400CFAC48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA8DA7207156D400CFAC48 /* LaunchScreen.storyboard */; };
 		3DDA8DB4207156D500CFAC48 /* BenchmarksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8DB3207156D500CFAC48 /* BenchmarksTests.swift */; };
 		3DDA8DBF207156D500CFAC48 /* BenchmarksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8DBE207156D500CFAC48 /* BenchmarksUITests.swift */; };
+		3DEC28C32071A5AE00EB0CD8 /* Benchmarks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC28C22071A5AE00EB0CD8 /* Benchmarks.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3DDA8DBA207156D500CFAC48 /* BenchmarksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BenchmarksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA8DBE207156D500CFAC48 /* BenchmarksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarksUITests.swift; sourceTree = "<group>"; };
 		3DDA8DC0207156D500CFAC48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DEC28C22071A5AE00EB0CD8 /* Benchmarks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Benchmarks.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		3DDA8D9A207156D200CFAC48 /* Benchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				3DEC28C22071A5AE00EB0CD8 /* Benchmarks.txt */,
 				3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */,
 				3DDA8D9D207156D200CFAC48 /* ViewController.swift */,
 				3DDA8D9F207156D200CFAC48 /* Main.storyboard */,
@@ -234,6 +237,7 @@
 			files = (
 				3DDA8DA9207156D400CFAC48 /* LaunchScreen.storyboard in Resources */,
 				3DDA8DA6207156D400CFAC48 /* Assets.xcassets in Resources */,
+				3DEC28C32071A5AE00EB0CD8 /* Benchmarks.txt in Resources */,
 				3DDA8DA1207156D200CFAC48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
