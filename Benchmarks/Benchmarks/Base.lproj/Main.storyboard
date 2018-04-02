@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Benchmarks" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ypP-sT-xVQ"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="ypP-sT-xVQ"/>
                     <connections>
                         <outlet property="mapView" destination="tOd-7s-u9X" id="SDl-jn-m4W"/>
                     </connections>
@@ -40,7 +40,7 @@
             </objects>
             <point key="canvasLocation" x="1079.2" y="133.00492610837438"/>
         </scene>
-        <!--Item-->
+        <!--Benchmarks-->
         <scene sceneID="nlf-fN-kjp">
             <objects>
                 <tableViewController id="LBj-GT-ili" sceneMemberID="viewController">
@@ -63,7 +63,7 @@
                             <outlet property="delegate" destination="LBj-GT-ili" id="BNs-6o-6qt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="nzn-Fk-QbV"/>
+                    <tabBarItem key="tabBarItem" title="Benchmarks" id="nzn-Fk-QbV"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isl-fP-MqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
