@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         annotation1.coordinate = CLLocationCoordinate2D(latitude: 51.697451, longitude: -2.218123)
         mapView.addAnnotation(annotation1)
         
-        let path = Bundle.main.path(forResource: "Benchmarks", ofType: "txt")
+        let path = Bundle.main.path(forResource: "Benchmarks", ofType: "csv")
         let fileManager = FileManager.default
         
         if fileManager.fileExists(atPath: path!) {
@@ -43,8 +43,9 @@ class ViewController: UIViewController {
                 let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
                 var readings = fullText.components(separatedBy: "\n") as [String]
                 for i in 4..<readings.count {
+//                    print(readings[i])
                     let benchmarkData = readings[i].components(separatedBy: "\t")
-                    
+
                     benchmarkDictionary["NG_LETTERS"] = "\(benchmarkData[0])"
                     benchmarkDictionary["EASTING"] = "\(benchmarkData[1])"
                     benchmarkDictionary["NORTHING"] = "\(benchmarkData[2])"
@@ -57,7 +58,7 @@ class ViewController: UIViewController {
                     benchmarkDictionary["VERIFIED_DATE"] = "\(benchmarkData[9])"
                     benchmarkDictionary["LEVELING DATE"] = "\(benchmarkData[10])"
                     benchmarkDictionary["DESCRIPTION"] = "\(benchmarkData[11])"
-                    
+
                     benchmarkArray.add(benchmarkDictionary)
                 }
             } catch let error as NSError {
