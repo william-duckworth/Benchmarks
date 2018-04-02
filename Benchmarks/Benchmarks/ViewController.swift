@@ -33,6 +33,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+//            centerMapOnLocation(location: locationManager.location!)
         }
 
         annotation.title = "TEST"
@@ -41,8 +42,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         mapView.addAnnotation(annotation)
         annotation1.coordinate = CLLocationCoordinate2D(latitude: 51.697451, longitude: -2.218123)
         mapView.addAnnotation(annotation1)
-        
-        centerMapOnLocation(location: locationManager.location!)
     }
 
     override func didReceiveMemoryWarning() {
