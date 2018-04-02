@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D779BED2072467000DA08FA /* BenchmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D779BEC2072467000DA08FA /* BenchmarksTableViewController.swift */; };
 		3DDA8D9C207156D200CFAC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */; };
 		3DDA8D9E207156D200CFAC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9D207156D200CFAC48 /* ViewController.swift */; };
 		3DDA8DA1207156D200CFAC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9F207156D200CFAC48 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D779BEC2072467000DA08FA /* BenchmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchmarksTableViewController.swift; sourceTree = "<group>"; };
 		3DDA8D98207156D200CFAC48 /* Benchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DDA8D9D207156D200CFAC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */,
 				3DDA8D9D207156D200CFAC48 /* ViewController.swift */,
+				3D779BEC2072467000DA08FA /* BenchmarksTableViewController.swift */,
 				3DDA8D9F207156D200CFAC48 /* Main.storyboard */,
 				3DDA8DA5207156D400CFAC48 /* Assets.xcassets */,
 				3DDA8DA7207156D400CFAC48 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 				3DDA8DA4207156D200CFAC48 /* Benchmarks.xcdatamodeld in Sources */,
 				3DDA8D9E207156D200CFAC48 /* ViewController.swift in Sources */,
 				3DDA8D9C207156D200CFAC48 /* AppDelegate.swift in Sources */,
+				3D779BED2072467000DA08FA /* BenchmarksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

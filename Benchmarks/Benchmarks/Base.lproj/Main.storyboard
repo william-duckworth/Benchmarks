@@ -43,7 +43,7 @@
         <!--Benchmarks-->
         <scene sceneID="nlf-fN-kjp">
             <objects>
-                <tableViewController id="LBj-GT-ili" sceneMemberID="viewController">
+                <tableViewController id="LBj-GT-ili" customClass="BenchmarksTableViewController" customModule="Benchmarks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qxz-uo-nuv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,6 +75,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2YA-HE-Vww" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f3i-Wr-Ztr">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
