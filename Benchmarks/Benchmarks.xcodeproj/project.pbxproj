@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D779BEF20724D6800DA08FA /* Benchmarks-tab-bbedit.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D779BEE20724D6800DA08FA /* Benchmarks-tab-bbedit.txt */; };
 		3D779BF120724EAB00DA08FA /* Benchmarks.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3D779BF020724EAB00DA08FA /* Benchmarks.csv */; };
+		3D78E308207251BE000963A9 /* sample_data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3D78E307207251BD000963A9 /* sample_data.txt */; };
 		3DDA8D9C207156D200CFAC48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */; };
 		3DDA8D9E207156D200CFAC48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9D207156D200CFAC48 /* ViewController.swift */; };
 		3DDA8DA1207156D200CFAC48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA8D9F207156D200CFAC48 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		3D779BEE20724D6800DA08FA /* Benchmarks-tab-bbedit.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Benchmarks-tab-bbedit.txt"; path = "../../Data/benckmark tab files/Benchmarks-tab-bbedit.txt"; sourceTree = "<group>"; };
 		3D779BF020724EAB00DA08FA /* Benchmarks.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Benchmarks.csv; path = ../../Data/Benchmarks.csv; sourceTree = "<group>"; };
+		3D78E307207251BD000963A9 /* sample_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample_data.txt; path = ../../Data/sample_data.txt; sourceTree = "<group>"; };
 		3DDA8D98207156D200CFAC48 /* Benchmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Benchmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA8D9B207156D200CFAC48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DDA8D9D207156D200CFAC48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 		3DDA8D9A207156D200CFAC48 /* Benchmarks */ = {
 			isa = PBXGroup;
 			children = (
+				3D78E307207251BD000963A9 /* sample_data.txt */,
 				3D779BF020724EAB00DA08FA /* Benchmarks.csv */,
 				3D779BEE20724D6800DA08FA /* Benchmarks-tab-bbedit.txt */,
 				3DEC28C22071A5AE00EB0CD8 /* Benchmarks.txt */,
@@ -247,6 +250,7 @@
 				3DDA8DA6207156D400CFAC48 /* Assets.xcassets in Resources */,
 				3DEC28C32071A5AE00EB0CD8 /* Benchmarks.txt in Resources */,
 				3DDA8DA1207156D200CFAC48 /* Main.storyboard in Resources */,
+				3D78E308207251BE000963A9 /* sample_data.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
