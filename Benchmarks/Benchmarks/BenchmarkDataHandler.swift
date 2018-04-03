@@ -18,7 +18,7 @@ class BenchmarkDataHandler: NSObject {
         return appDelegate.persistentContainer.viewContext
     }
     
-    class func saveBenchmark(NG_LETTERS: String, EASTING: String, NORTHING: String, HEIGHT: String, DATUM: String, NETWORK: String, ORDER: String, TYPE_OF_MARK: String, HEIGHT_ABOVE_GROUND: String, VERIFIED_DATE: String, LEVELING_DATE: String, DESCRIPTION: String) -> Bool {
+    class func saveBenchmark(NG_LETTERS: String, EASTING: String, NORTHING: String, HEIGHT: String, DATUM: String, NETWORK: String, ORDER: String, TYPE_OF_MARK: String, HEIGHT_ABOVE_GROUND: String, VERIFIED_DATE: String, LEVELING_DATE: String, DESCRIPTION: String, Latitude: Double, Longitude: Double, Altitude: String) -> Bool {
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "Benchmarks", in: context)
         let managedObject = NSManagedObject(entity: entity!, insertInto: context)
@@ -35,12 +35,26 @@ class BenchmarkDataHandler: NSObject {
         managedObject.setValue(VERIFIED_DATE, forKey: "verified_date")
         managedObject.setValue(LEVELING_DATE, forKey: "leveling_date")
         managedObject.setValue(DESCRIPTION, forKey: "mark_description")
+        managedObject.setValue(Latitude, forKey: "latitude")
+        managedObject.setValue(Longitude, forKey: "longitude")
+        managedObject.setValue(Altitude, forKey: "altitude")
         
         do {
             try context.save()
             return true
         } catch {
             return false
+        }
+    }
+    
+    class func getBenchmarks() -> [Benchmarks]? {
+        let context = getContext()
+        var benchmarks:[Benchmarks]? = nil
+        do {
+            benchmarks = try context.fetch(Benchmarks.fetchRequest())
+            return benchmarks
+        } catch {
+            return benchmarks
         }
     }
 }
