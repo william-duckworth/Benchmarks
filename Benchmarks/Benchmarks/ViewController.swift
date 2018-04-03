@@ -60,14 +60,18 @@ class ViewController: UIViewController {
 
                     print("Parsed: ", i)
                     
-                    benchmarkArray.add(benchmarkDictionary)
+//                    benchmarkArray.add(benchmarkDictionary)
+                    
+                    if BenchmarkDataHandler.saveBenchmark(NG_LETTERS: "\(benchmarkData[0])", EASTING: "\(benchmarkData[1])", NORTHING: "\(benchmarkData[2])", HEIGHT: "\(benchmarkData[3])", DATUM: "\(benchmarkData[4])", NETWORK: "\(benchmarkData[5])", ORDER: "\(benchmarkData[6])", TYPE_OF_MARK: "\(benchmarkData[7])", HEIGHT_ABOVE_GROUND: "\(benchmarkData[8])", VERIFIED_DATE: "\(benchmarkData[9])", LEVELING_DATE: "\(benchmarkData[10])", DESCRIPTION: "\(benchmarkData[11])") {
+                        print("Saved to Core Data")
+                    }
                 }
             } catch let error as NSError {
                 print("Error: \(error)")
             }
         }
-        print("Benchmark Total:")
-        print(benchmarkArray.count)
+//        print("Benchmark Total:")
+//        print(benchmarkArray.count)
     }
 
     override func didReceiveMemoryWarning() {
