@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         let path = Bundle.main.path(forResource: "Benchmarks", ofType: "csv")
         let fileManager = FileManager.default
-        
+
         if fileManager.fileExists(atPath: path!) {
             do {
                 let fullText = try String(contentsOfFile: path!, encoding: String.Encoding.utf8)
@@ -45,24 +45,30 @@ class ViewController: UIViewController {
                 for i in 2..<(readings.count) {
                     let benchmarkData = readings[i].components(separatedBy: ",")
 
-                    benchmarkDictionary["NG_LETTERS"] = "\(benchmarkData[0])"
-                    benchmarkDictionary["EASTING"] = "\(benchmarkData[1])"
-                    benchmarkDictionary["NORTHING"] = "\(benchmarkData[2])"
-                    benchmarkDictionary["HEIGHT"] = "\(benchmarkData[3])"
-                    benchmarkDictionary["DATUM"] = "\(benchmarkData[4])"
-                    benchmarkDictionary["NETWORK"] = "\(benchmarkData[5])"
-                    benchmarkDictionary["ORDER"] = "\(benchmarkData[6])"
-                    benchmarkDictionary["TYPE_OF_MARK"] = "\(benchmarkData[7])"
-                    benchmarkDictionary["HEIGHT_ABOVE_GROUND"] = "\(benchmarkData[8])"
-                    benchmarkDictionary["VERIFIED_DATE"] = "\(benchmarkData[9])"
-                    benchmarkDictionary["LEVELING DATE"] = "\(benchmarkData[10])"
-                    benchmarkDictionary["DESCRIPTION"] = "\(benchmarkData[11])"
+//                    benchmarkDictionary["NG_LETTERS"] = "\(benchmarkData[0])"
+//                    benchmarkDictionary["EASTING"] = "\(benchmarkData[1])"
+//                    benchmarkDictionary["NORTHING"] = "\(benchmarkData[2])"
+//                    benchmarkDictionary["HEIGHT"] = "\(benchmarkData[3])"
+//                    benchmarkDictionary["DATUM"] = "\(benchmarkData[4])"
+//                    benchmarkDictionary["NETWORK"] = "\(benchmarkData[5])"
+//                    benchmarkDictionary["ORDER"] = "\(benchmarkData[6])"
+//                    benchmarkDictionary["TYPE_OF_MARK"] = "\(benchmarkData[7])"
+//                    benchmarkDictionary["HEIGHT_ABOVE_GROUND"] = "\(benchmarkData[8])"
+//                    benchmarkDictionary["VERIFIED_DATE"] = "\(benchmarkData[9])"
+//                    benchmarkDictionary["LEVELING DATE"] = "\(benchmarkData[10])"
+//                    benchmarkDictionary["DESCRIPTION"] = "\(benchmarkData[11])"
+//                    benchmarkDictionary["ETRS89GD-Lat"] = "\(benchmarkData[12])"
+//                    benchmarkDictionary["ETRS89GD-Long"] = "\(benchmarkData[13])"
+//                    benchmarkDictionary["ETRS89GD-Alt"] = "\(benchmarkData[14])"
 
                     print("Parsed: ", i)
-                    
+
 //                    benchmarkArray.add(benchmarkDictionary)
+
+                    let doubleLong = Double("\(benchmarkData[13])")
+                    let doubleLat = Double("\(benchmarkData[12])")
                     
-                    if BenchmarkDataHandler.saveBenchmark(NG_LETTERS: "\(benchmarkData[0])", EASTING: "\(benchmarkData[1])", NORTHING: "\(benchmarkData[2])", HEIGHT: "\(benchmarkData[3])", DATUM: "\(benchmarkData[4])", NETWORK: "\(benchmarkData[5])", ORDER: "\(benchmarkData[6])", TYPE_OF_MARK: "\(benchmarkData[7])", HEIGHT_ABOVE_GROUND: "\(benchmarkData[8])", VERIFIED_DATE: "\(benchmarkData[9])", LEVELING_DATE: "\(benchmarkData[10])", DESCRIPTION: "\(benchmarkData[11])") {
+                    if BenchmarkDataHandler.saveBenchmark(NG_LETTERS: "\(benchmarkData[0])", EASTING: "\(benchmarkData[1])", NORTHING: "\(benchmarkData[2])", HEIGHT: "\(benchmarkData[3])", DATUM: "\(benchmarkData[4])", NETWORK: "\(benchmarkData[5])", ORDER: "\(benchmarkData[6])", TYPE_OF_MARK: "\(benchmarkData[7])", HEIGHT_ABOVE_GROUND: "\(benchmarkData[8])", VERIFIED_DATE: "\(benchmarkData[9])", LEVELING_DATE: "\(benchmarkData[10])", DESCRIPTION: "\(benchmarkData[11])", Latitude: doubleLat!, Longitude: doubleLong!, Altitude: "\(benchmarkData[14])") {
                         print("Saved to Core Data")
                     }
                 }
@@ -72,6 +78,20 @@ class ViewController: UIViewController {
         }
 //        print("Benchmark Total:")
 //        print(benchmarkArray.count)
+        
+        let benchmarks = BenchmarkDataHandler.getBenchmarks()
+        
+        for i in benchmarks! {
+            if i.latitude != nil {
+                print("Latitude: ", i.latitude, " Longitude: ", i.longitude)
+                annotation.coordinate = CLLocationCoordinate2D(latitude: i.latitude, longitude: i.longitude)
+                mapView.addAnnotation(annotation)
+
+            }
+//            annotation.coordinate = CLLocationCoordinate2D(latitude: i.latitude, longitude: i.longitude)
+//            mapView.addAnnotation(annotation)
+//            print("Latitude: ", i.latitude, " Longitude: ", i.longitude)
+        }
     }
 
     override func didReceiveMemoryWarning() {
